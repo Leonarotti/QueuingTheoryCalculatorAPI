@@ -24,7 +24,7 @@ def calcular_metricas(lambd, mu, c):
 
     return {
         "lambda": lambd,
-        "mu": mu,
+        "mu": round(mu, 4),
         "c": c,
         "rho": round(rho, 4),
         "p0": round(p0, 4),
