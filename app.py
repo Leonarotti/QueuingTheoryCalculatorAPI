@@ -1,13 +1,9 @@
 from flask import Flask, request, jsonify
 from math import factorial
-
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app)  # Habilita CORS para todas las rutas y orígenes
-
-app = Flask(__name__)
-CORS(app, resources={r"/api/*": {"origins": "http://localhost:3000"}})
+CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 def calcular_p0(lambd, mu, c):
     rho = lambd / (c * mu)
