@@ -29,8 +29,8 @@ def calcular_metricas(lambd, mu, c):
         "rho": round(rho, 4),
         "p0": round(p0, 4),
         "Lq": round(lq, 4),
-        "Wq": round(wq, 2),
-        "W": round(w, 2),
+        "Wq": round(wq * 60, 2),
+        "W": round(w * 60, 2),
         "L": round(l, 4),
         "recomendacion": generar_recomendacion(rho)
     }
@@ -49,7 +49,7 @@ def calcular_optimo_servidores(lambd, tiempo_servicio, costo_espera_por_cliente,
         resultados.append({
             "servidores": c,
             "Lq": round(lq, 2),
-            "Wq": round(wq, 2),
+            "Wq": round(wq * 60, 2),
             "rho": round(rho, 4),
             "costo_total": round(costo_total, 2)
         })
