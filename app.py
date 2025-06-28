@@ -38,7 +38,7 @@ def calcular_metricas(lambd, mu, c):
 def calcular_optimo_servidores(lambd, tiempo_servicio, costo_espera_por_cliente, costo_por_servidor):
     mu = 60 / tiempo_servicio
     resultados = []
-    for c in range(1, 21):
+    for c in range(1, 11):
         rho = lambd / (c * mu)
         if rho >= 1:
             continue
