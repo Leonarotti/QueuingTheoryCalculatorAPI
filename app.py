@@ -89,7 +89,7 @@ def api_colas():
     except Exception as e:
         return jsonify({"error": str(e)}), 400
 
-# RUTA 2: Calcular número óptimo de empleados
+# RUTA 2: Calcular número óptimo de servidores (empleados)
 @app.route('/api/colas/optimo', methods=['POST'])
 def api_optimo():
     try:
