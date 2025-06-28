@@ -15,7 +15,7 @@ def calcular_p0(lambd, mu, c):
 def calcular_metricas(lambd, mu, c):
     rho = lambd / (c * mu)
     if rho >= 1:
-        return {"error": "El sistema no es estable. Rho debe ser menor a 1."}
+        return {"error": "El sistema inestable, no tiene la capacidad de atender la demanda (p > 100%)."}
     p0 = calcular_p0(lambd, mu, c)
     lq = (p0 * ((lambd / mu) ** c) * rho) / (factorial(c) * (1 - rho) ** 2)
     wq = lq / lambd
